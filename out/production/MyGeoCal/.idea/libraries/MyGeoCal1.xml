@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="MyGeoCal1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jlatexmath-1.0.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jfoenix-8.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/controlsfx-8.40.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jlatexmath-font-greek-1.0.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jlatexmath-font-cyrillic-1.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

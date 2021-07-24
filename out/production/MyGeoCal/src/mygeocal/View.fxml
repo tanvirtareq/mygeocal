@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="pane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#mouseClicked" onMouseDragged="#mouseDragged" onMousePressed="#mousePressedPosition" onScroll="#scrollZoom" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mygeocal.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="listPane" layoutX="750.0" layoutY="60.0" onMouseClicked="#mouseInSidebar" onMouseDragged="#mouseInSidebar" onMousePressed="#mouseInSidebar" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <JFXTabPane fx:id="tabPane" onMouseClicked="#mouseInSidebar" onMouseDragged="#mouseInSidebar" onMouseEntered="#mouseInSidebar" onMouseExited="#mouseInSidebar" onMouseMoved="#mouseInSidebar" onMousePressed="#mouseInSidebar" onMouseReleased="#mouseInSidebar" prefWidth="250.0" style="-fx-background-color: #6991DF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <tabs>
+                  <Tab text="  Point  ">
+                    <content>
+                      <AnchorPane fx:id="pointPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #6991DF;">
+                           <children>
+                              <Separator prefHeight="9.0" prefWidth="250.0" style="-fx-background-color: BLACK;" AnchorPane.bottomAnchor="138.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <TableView fx:id="pointTable" layoutX="14.0" layoutY="42.0" onMouseClicked="#mouseInSidebar" onMouseEntered="#mouseInSidebar" onMouseMoved="#mouseInSidebar" prefHeight="365.0" prefWidth="250.0" style="-fx-background-color: #6991DF; -fx-background-insets: #6991DF;" AnchorPane.bottomAnchor="138.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="nameColumn" prefWidth="88.0" text="Name" />
+                                  <TableColumn fx:id="coColumnX" prefWidth="78.0" text="X" />
+                                    <TableColumn fx:id="coColumnY" prefWidth="74.0" text="Y" />
+                                </columns>
+                              </TableView>
+                              <JFXButton fx:id="createPoint" buttonType="RAISED" graphicTextGap="0.0" layoutX="140.0" layoutY="461.0" onAction="#createPointPressed" style="-fx-background-radius: 7; -fx-background-color: #0047D5;" text="Create Point" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="14.0">
+                                 <font>
+                                    <Font name="Constantia" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label layoutX="3.0" layoutY="381.0" prefHeight="17.0" prefWidth="52.0" text="Name :" AnchorPane.bottomAnchor="101.0" AnchorPane.leftAnchor="3.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="15.0" layoutY="419.0" text="X =" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="15.0">
+                                 <font>
+                                    <Font name="Times New Roman Italic" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="135.0" layoutY="419.0" text="Y =" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="135.0">
+                                 <font>
+                                    <Font name="Times New Roman Italic" size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="nameTextField" layoutX="58.0" layoutY="379.0" prefHeight="25.0" prefWidth="68.0" promptText="Point Name" unFocusColor="BLACK" AnchorPane.bottomAnchor="99.0" AnchorPane.rightAnchor="124.0" />
+                              <JFXTextField layoutX="58.0" layoutY="417.0" prefHeight="25.0" prefWidth="68.0" promptText="x" unFocusColor="BLACK" AnchorPane.bottomAnchor="61.0" AnchorPane.rightAnchor="124.0" fx:id="xTextField">
+                                 <font>
+                                    <Font name="Times New Roman Italic" size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="yTextField" layoutX="168.0" layoutY="417.0" prefHeight="25.0" prefWidth="68.0" promptText="y" unFocusColor="BLACK" AnchorPane.bottomAnchor="61.0" AnchorPane.rightAnchor="15.0">
+                                 <font>
+                                    <Font name="Times New Roman Italic" size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="  Segment  ">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="segmentTable" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #6991DF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="segmentName" prefWidth="75.0" text="Name" />
+                                  <TableColumn fx:id="segmentStart" prefWidth="86.0" text="Start" />
+                                    <TableColumn fx:id="segmentEnd" prefWidth="88.0" text="End" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="  Circle  ">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="circleTable" layoutX="14.0" onMouseClicked="#mouseInSidebar" onMouseEntered="#mouseInSidebar" onMouseMoved="#mouseInSidebar" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #6991DF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TableColumn fx:id="circleName" prefWidth="58.0" text="Name" />
+                                    <TableColumn fx:id="circleCenterX" prefWidth="69.0" text="Center-X" />
+                                    <TableColumn fx:id="circleCenterY" minWidth="0.0" prefWidth="58.0" text="Center-Y" />
+                                    <TableColumn fx:id="circleRadius" maxWidth="102.0" minWidth="5.0" prefWidth="64.0" text="Radius" />
+                                 </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="745.0" layoutY="130.0" orientation="VERTICAL" prefHeight="540.0" prefWidth="1.0" style="-fx-background-color: ROYALBLUE;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="249.0" AnchorPane.topAnchor="60.0" />
+      <ToolBar fx:id="toolBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#mouseInSidebar" onMouseMoved="#mouseInSidebar" onMousePressed="#mouseInSidebar" prefHeight="60.0" style="-fx-background-color: #6991DF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <items>
+            <Button fx:id="zoomOutButton" mnemonicParsing="false" onAction="#zoomOutButtonPressed" prefHeight="20.0" prefWidth="100.0" style="-fx-background-radius: 7; -fx-background-color: #87AFFF;" text="Zoom Out" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <Button id="zoomInButton" fx:id="zoomInButton" mnemonicParsing="false" onAction="#zoomInButtonPressed" prefHeight="6.0" prefWidth="90.0" style="-fx-background-radius: 7; -fx-background-color: #0047D5;" text="Zoom In" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Constantia" size="12.0" />
+               </font></Button>
+            <JFXToggleButton fx:id="GP" onAction="#graphPaperButtonPressed" prefHeight="52.0" prefWidth="163.0" selected="true" size="8.0" text="Graph Paper" textAlignment="CENTER" textFill="WHITE">
+               <tooltip>
+                  <Tooltip text="Graph Paper" />
+               </tooltip>
+               <font>
+                  <Font name="Constantia" size="17.0" />
+               </font></JFXToggleButton>
+            <JFXButton fx:id="selectBtn" graphicTextGap="0.0" onAction="#selectBtnPressed" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: ;" />
+            <JFXButton fx:id="btn0" graphicTextGap="0.0" onAction="#btn0Pressed" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: ;" />
+            <JFXButton fx:id="midPointButton" graphicTextGap="0.0" onAction="#midPointButtonPressed" />
+            <JFXButton fx:id="btn1" graphicTextGap="0.0" onAction="#btn1Pressed" prefHeight="40.0" prefWidth="40.0">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem fx:id="segmentItem" mnemonicParsing="false" onAction="#segmentPressed" text="Segment" />
+                        <MenuItem fx:id="straightLineItem" mnemonicParsing="false" onAction="#straightLinePressed" text="Line" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </JFXButton>
+            <JFXButton fx:id="btn8" graphicTextGap="0.0" onAction="#btn8Pressed" prefHeight="25.0" prefWidth="29.0" />
+            <JFXButton fx:id="btn2" onAction="#btn2Pressed" prefHeight="40.0" prefWidth="18.0" style="-fx-background-color: #00000000;">
+               <contextMenu>
+                  <ContextMenu fx:id="contextMenu02">
+                    <items>
+                      <MenuItem fx:id="perpendicularLineItem" mnemonicParsing="false" onAction="#perpendicularLinePressed" text="Perpendicular Line" />
+                        <MenuItem fx:id="perpendicularBisectorItem" mnemonicParsing="false" onAction="#bisectorItemPressed" text="Perpendicular Bisector" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </JFXButton>
+            <JFXButton fx:id="btn3" onAction="#btn3Pressed" prefHeight="25.0" prefWidth="16.0" />
+            <JFXButton fx:id="btn4" graphicTextGap="0.0" onAction="#btn4Pressed" prefHeight="25.0" prefWidth="16.0" />
+            <JFXButton fx:id="btn5" graphicTextGap="0.0" onAction="#btn5Pressed" prefHeight="25.0" prefWidth="20.0" />
+            <JFXButton fx:id="btn7" onAction="#btn7Pressed" prefHeight="25.0" prefWidth="20.0" />
+            <JFXButton fx:id="btn11" graphicTextGap="0.0" onAction="#btn11Pressed" prefHeight="40.0" prefWidth="68.0" style="-fx-background-color: White;" text="y = f(x)">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="area" graphicTextGap="0.0" onAction="#btn6Pressed" prefHeight="40.0">
+               <font>
+                  <Font name="Constantia" size="9.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="clear" graphicTextGap="0.0" onAction="#clearEverythingPressed" />
+         </items>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </ToolBar>
+      <Canvas fx:id="canvas" height="540.0" layoutY="60.0" width="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="60.0" />
+      <Separator fx:id="separator" layoutY="61.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1.0" style="-fx-background-color: BLACK;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>

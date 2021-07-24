@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MyGeoCal">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/MyGeoCal.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

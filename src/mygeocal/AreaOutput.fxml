@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="mygeocal.AreaOutputController">
+   <children>
+      <Label layoutX="45.0" layoutY="50.0" text=" Area = ">
+         <font>
+            <Font name="Constantia" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="areaAns" layoutX="174.0" layoutY="52.0" text="12">
+         <font>
+            <Font name="Times New Roman Italic" size="34.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="311.0" layoutY="150.0" onAction="#okPressed" prefHeight="25.0" prefWidth="53.0" style="-fx-background-color: #0047D5; -fx-background-radius: 7;" text="OK" textFill="WHITE" />
+   </children>
+</AnchorPane>

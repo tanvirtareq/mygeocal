@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="375.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="properties.SegmentPropertiesController">
+   <children>
+      <Label layoutX="96.0" layoutY="41.0" prefHeight="40.0" prefWidth="258.0" text="Segment Properties">
+         <font>
+            <Font name="Constantia" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="15.0" layoutY="15.0">
+         <image>
+            <Image url="@../image/Properties%20Icon.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="95.0" layoutY="80.0" prefHeight="1.0" prefWidth="240.0" style="-fx-background-color: BLACK;" />
+      <Label layoutX="26.0" layoutY="120.0" text="Start Point : " underline="true">
+         <font>
+            <Font name="Constantia" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="okButtonPressed" buttonType="RAISED" layoutX="255.0" layoutY="360.0" onAction="#okButtonPressed" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #6991DF; -fx-background-radius: 4;" text="Ok" textFill="WHITE" />
+      <JFXButton fx:id="cancelButtonPressed" buttonType="RAISED" layoutX="325.0" layoutY="360.0" onAction="#cancelButtonPressed" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #6991DF; -fx-background-radius: 4;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Line endX="400.0" layoutY="401.0" startX="2.0" strokeWidth="5.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="0.4952380952380952">
+               <stops>
+                  <Stop color="#b3dbe8" />
+                  <Stop color="#b3dbe8" offset="0.007662835249042145" />
+                  <Stop color="#5c8ceb" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Line endY="400.0" layoutX="2.0" strokeWidth="5.0">
+         <stroke>
+            <LinearGradient endX="0.7476190476190476" endY="0.7">
+               <stops>
+                  <Stop color="#5c8ceb" />
+                  <Stop color="#b3dcea" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Line endX="400.0" layoutY="2.0" startX="2.0" strokeWidth="5.0">
+         <stroke>
+            <LinearGradient endX="0.7476190476190476" endY="0.32380952380952377">
+               <stops>
+                  <Stop color="#5c8ceb" />
+                  <Stop color="#b3dcea" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Line endY="400.0" layoutX="391.0" layoutY="1.0" strokeWidth="5.0" AnchorPane.rightAnchor="0.0">
+         <stroke>
+            <LinearGradient endX="0.5333333333333333" endY="1.0" startX="0.4047619047619047" startY="0.3476190476190476">
+               <stops>
+                  <Stop color="#b3dcea" />
+                  <Stop color="#b3dcea" offset="0.007662835249042145" />
+                  <Stop color="#5c8ceb" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Label layoutX="26.0" layoutY="177.0" text="End  Point :" underline="true">
+         <font>
+            <Font name="Constantia" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="startLabel" layoutX="154.0" layoutY="120.0" text="(">
+         <font>
+            <Font name="Times New Roman Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="endLabel" layoutX="155.0" layoutY="175.0" text="(">
+         <font>
+            <Font name="Times New Roman Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="225.0" text="Length :" underline="true">
+         <font>
+            <Font name="Constantia" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lengthLabel" graphicTextGap="0.0" layoutX="108.0" layoutY="227.0" text="12">
+         <font>
+            <Font name="Times New Roman Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="275.0" text="Slope :">
+         <font>
+            <Font name="Constantia" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="slopeLabel" graphicTextGap="0.0" layoutX="98.0" layoutY="276.0" text="12">
+         <font>
+            <Font name="Times New Roman Italic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
